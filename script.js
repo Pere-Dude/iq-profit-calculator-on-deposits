@@ -53,8 +53,7 @@ $(document).ready(function () {
                     sumAdd: monthly_sum
                 },
                 success: function (data) {
-                    var result = JSON.parse(data);
-                    $('#main-form-result').text('₽ ' + data);
+                   $('#main-form-result').text('₽ ' + data.sum);
                 }
             });
         },
@@ -62,7 +61,6 @@ $(document).ready(function () {
             date: {
                 required: true,
                 anyDate: true
-                    //date: true
             },
             sum: {
                 required: true,
